@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ABC Corp.</title>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/journal/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <style>
+        .form-control {
+            display: block;
+            width: 35%;
+            height: 39px;
+            padding: 8px 12px;
+            font-size: 15px;
+            line-height: 1.42857143;
+            color: #777777;
+            background-color: #ffffff;
+            background-image: none;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+        }
+
+        .table {
+            width: 50%;
+            max-width: 100%;
+            margin-bottom: 21px;
+            margin-left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Form for the server-->
+    <form class="form-horizontal" action="insertDB.php" method="post">
+        <fieldset>
+
+            <legend>Project Summary</legend>
+            <!-- form section for Essn-->
+             <span class="help-block">WORKS ON TABLE </span>
+            <!-- form section for Essn-->
+            <!-- form section for hours worked-->
+            <div class="form-group">
+                <label for="Essn" class="col-lg-2 control-label">EMPLOYEE ID</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" name="Essn" id="hours" placeholder="Essn" maxlength="9" autocomplete="on">
+                </div>
+            </div>
+            <!--this is the end of the hours worked-->
+
+            <!-- form section for Project Number-->
+            <div class="form-group">
+                <label for="Pno" class="col-lg-2 control-label">Project Number</label>
+                <div class="col-lg-10">
+                    <input type="number" class="form-control" name="Pno" id="Pnoid" placeholder="Project Number" maxlength="1" autocomplete="on">
+                </div>
+            </div>
+            <!--this is the end of the Project Number-->
+
+
+            <!-- form section for hours worked-->
+            <div class="form-group">
+                <label for="hours" class="col-lg-2 control-label">Hours Worked</label>
+                <div class="col-lg-10">
+                    <input type="number" class="form-control" name="hours" id="hours" placeholder="Hours" maxlength="4" autocomplete="on">
+                </div>
+            </div>
+            <!--this is the end of the hours worked-->
+
+            <!--submit button-->
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary" id="button1">Submit</button>
+                </div>
+            </div>
+            <!--end of submit button-->
+        </fieldset>
+    </form>
+    <!--end of the WORK_ON requirements-->
+
+    <legend>Update Salary</legend>
+    <form class="form-horizontal" action="UpdateSalary.php" method="post">
+        <fieldset>
+
+            <!--submit button-->
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            <!--end of submit button-->
+
+       </fieldset>
+    </form>
+
+    <br/>
+
+    <legend>Salary Report</legend>
+            <form class="form-horizontal" action="Salary.php" method="post">
+                <fieldset>
+                    <!--submit button-->
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="submit"  class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                    <!--end of submit button-->
+                </fieldset>
+            </form>
+
+    <br/>
+
+    <legend>EMPLOYEE BY Department</legend>
+    <form class="form-horizontal" action="getDepartment.php" method="post">
+        <fieldset>
+
+            <!-- form section for Department number-->
+            <span class="help-block"> Enter your Department number below </span>
+            <div class="form-group">
+                <label for="Dno" class="col-lg-2 control-label"> Department </label>
+                <div class="col-lg-10">
+                    <input type="number" class="form-control" name="Dno" id="Dno" placeholder="Department No." maxlength="1" autocomplete="on">
+                </div>
+            </div>
+            <!--this is the end of the Department Number-->
+
+            <!--submit button-->
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            <!--end of submit button-->
+
+       </fieldset>
+    </form>
+
+    <br/> 
+</body>
+
+</html>
